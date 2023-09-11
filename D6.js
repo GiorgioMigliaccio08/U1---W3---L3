@@ -35,6 +35,7 @@ console.log("Numeri pari:", filterNumber);
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+console.log("ESERCIZIO 4: ");
 const numeriArray1 = [1, 2, 3, 4, 5, 6, 7];
 let sum = 0;
 numeriArray1.forEach(function (num) {
@@ -64,14 +65,20 @@ console.log(incrementArray([5, 9, 5, 8], 4));
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
   es.: ["EPICODE", "is", "great"] => [7, 2, 5]
+
 */
+
+generateLenghtArray("EPICODE", "is", "great");
+const newArray = arrOfStrings.map((word) => {
+  return word.lenght;
+});
 
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
 console.log("ESERCIZIO 8: ");
 const oddNumber = [];
-const numbero = "number";
+const numero = "number";
 number.forEach((oddNun) => {
   if (oddNun % 2 !== 0) {
     oddNumber.push(oddNun);
@@ -197,6 +204,16 @@ const movies = [
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+const findTheOldest = function (arr) {
+  let oldest = arr[0];
+  arr.forEach((movie) => {
+    if (parseInt(movie.Year) < parseInt(oldest.Year)) {
+      oldest = movie;
+    }
+  });
+  return oldest;
+};
+console.log(findTheOldest(movies));
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
